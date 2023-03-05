@@ -5,26 +5,21 @@ import {categorias} from './listcategories'
 export const ProductsContext = createContext();
 
 export function ProductsContextProvider(props) {
-  
-  const [width, setWidth] = useState("");
-  const [heigth, setHeigth] = useState("");
-  useEffect(() => {
-    window.addEventListener("resize", handleResize);
-  }, []);
-  const handleResize = () => {
-    setWidth(window.innerWidth);
-    setHeigth(window.innerHeight);
-  };
-
+  const [prodcarrousel, setProdcarrousel]= useState([])
   const initialstate = {
     products: [],
     selectedProduct: null,
   };
+
+
+
+  
   const [state, dispatch] = useReducer(ProductReducer, initialstate);
 
   const getProducts = async () => {
     const res = await fetch("https://api.escuelajs.co/api/v1/products");
     const data = await res.json();
+    setProdcarrousel(data.slice(1, 10));
     dispatch({
       type: "GET_PRODUCTS",
       payload: data,
@@ -44,10 +39,9 @@ export function ProductsContextProvider(props) {
       value={{
         getProducts,
         getOneProduct,
+        prodcarrousel,
         products: state.products,
         selectedProduct: state.selectedProduct,
-        width,
-        heigth,
         categorias,
       }}
     >

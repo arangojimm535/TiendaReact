@@ -20,7 +20,7 @@ function ProductCard({ product }) {
         initial={{ opacity: 0 }}
         transition={{ delay: 0.4, duration: 1.5 }}
         animate={{ opacity: 1 }}
-        className="object-cover rounded-t-xl"
+        className="object-cover rounded-t-xl overflow-hidden max-w-full"
         src={product.images[0]}
       />
       <motion.div
@@ -43,7 +43,7 @@ function ProductCard({ product }) {
         </p>
         <p className="md:text-4xl font-bold text-center">${product.price}</p>
         <button className="bg-red-200 rounded-full md:p-1 sm:mx-4 sm:my-2 md:mx-10 md:my-2 ">
-          Añadir al carrito
+          Comprar
         </button>
       </motion.div>
     </motion.div>

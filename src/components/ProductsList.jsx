@@ -6,9 +6,8 @@ export function ProductsList() {
   useEffect(() => {
     getProducts();
   }, []);
-  console.log(products)
   return (
-    <div className="grid md:grid-cols-5 md:gap-6 md:mx-20 md:container grid-cols-2 gap-2  mx-4">
+    <div className="grid sm:mx-4 md:grid-cols-5 md:gap-6 md:mx-20 sm:grid-cols-2 sm:gap-2  mt-4">
       {products.map((product) => (
       <ProductCard key={product.id} product={product} />
       ))}

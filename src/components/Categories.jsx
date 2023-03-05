@@ -11,7 +11,7 @@ export function Categories() {
       initial={{ opacity: 0 }}
       transition={{ delay: 0.4, duration: 1.5 }}
       animate={{ opacity: 1 }}
-      className="sm:mt-4 grid sm:grid-cols-2 sm:gap-3 md:grid-cols-6 sm:mx-auto container md:mx-20 md:gap-10"
+      className="mt-4 grid sm:grid-cols-2 sm:gap-3 md:grid-flow-col-dense sm:mx-4 max-w-full md:mx-20 md:gap-10"
     >
       {categorias.map((categoria) => (
         <motion.div
@@ -23,6 +23,7 @@ export function Categories() {
           }}
           whileTap={{ scale: 0.9 }}
           className="sm:flex sm:flex-col sm:justify-center md:flex md:items-center md:justify-center bg-red-50 rounded-full"
+          key={categoria.id}
         >
           <motion.img
             initial={{ opacity: 0 }}
