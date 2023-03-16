@@ -12,27 +12,32 @@ export function Nav() {
           <motion.img
             src="./images/descarga.jpg"
             alt="logo"
-            initial={{ scale: 0, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 1.5 }}
+            initial={{opacity: 0 }}
+            animate={{opacity: 1 }}
+            transition={{ duration: 2}}
             className="object-cover h-28 w-28"
           />
         </div>
-        <motion.div initial={{scale:0}} transition={{delay:.5,duration:1.5}} animate={{scale:1}} className="md:w-96 sm:hidden">
+        <motion.div
+          initial={{ opacity: 0 }}
+          transition={{ delay: 0.5, duration: 1.5 }}
+          animate={{ opacity: 1 }}
+          className="md:w-96 sm:hidden"
+        >
           <Search />
         </motion.div>
         <motion.div className="sm:hidden">
           <ul className="flex flex-row">
             <li>
-              <a href="">Iniciar sesión</a>
+              <a href="" className="font-semibold hover:text-red-300">
+                Iniciar sesión
+              </a>
             </li>
-            <span>/</span>
+            <span className="font-semibold px-2">/</span>
             <li>
-              <a href="">Registrarse</a>
-            </li>
-            <span>|</span>
-            <li>
-              <a href="">Carrito</a>
+              <a href="" className="font-semibold hover:text-red-300">
+                Registrarse
+              </a>
             </li>
           </ul>
         </motion.div>
