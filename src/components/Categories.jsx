@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
-import { ProductsContext } from '../context/Products/ProductsContext'
+import { AppContext } from '../context/Products/AppContext'
 import { motion } from 'framer-motion'
 
 export function Categories () {
-  const { categorias } = useContext(ProductsContext)
+  const { categorias } = useContext(AppContext)
 
   return (
     <motion.div

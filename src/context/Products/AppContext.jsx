@@ -2,8 +2,8 @@ import { createContext, useReducer } from 'react'
 import AppReducer from './AppReducer'
 import { categorias } from './listcategories'
 
-export const ProductsContext = createContext()
-export function ProductsContextProvider (props) {
+export const AppContext = createContext()
+export function AppContextProvider (props) {
   const useVariants = () => {
     const initialstate = { products: [], selectedProduct: null, showLogin: false, register: false }
     const [state, dispatch] = useReducer(AppReducer, initialstate)
@@ -35,7 +35,6 @@ export function ProductsContextProvider (props) {
   const getProducts = async () => {
     const res = await fetch('https://api.escuelajs.co/api/v1/products')
     const data = await res.json()
-    console.log(data)
     setAllProducts(data)
   }
   const getProduct = async (id) => {
@@ -45,7 +44,7 @@ export function ProductsContextProvider (props) {
   }
 
   return (
-    <ProductsContext.Provider
+    <AppContext.Provider
       value={{
         getProducts,
         getProduct,
@@ -59,6 +58,6 @@ export function ProductsContextProvider (props) {
       }}
     >
       {props.children}
-    </ProductsContext.Provider>
+    </AppContext.Provider>
   )
 }

@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion'
 import { useContext } from 'react'
-import { ProductsContext } from '../context/Products/ProductsContext'
+import { AppContext } from '../context/Products/AppContext'
 import { Search } from './Search'
 
 export function Nav () {
-  const { showLogin, register, setShowLogin, changeViewLogin } = useContext(ProductsContext)
+  const { showLogin, register, setShowLogin, changeViewLogin } = useContext(AppContext)
   return (
     <>
       <nav

@@ -1,9 +1,9 @@
 import { useContext } from 'react'
-import { ProductsContext } from '../context/Products/ProductsContext'
+import { AppContext } from '../context/Products/AppContext'
 import { AnimatePresence, motion } from 'framer-motion'
 
 export function InicioSesion () {
-  const { showLogin, register, setShowLogin, changeViewLogin } = useContext(ProductsContext)
+  const { showLogin, register, setShowLogin, changeViewLogin } = useContext(AppContext)
   return (
     <>
       <AnimatePresence>

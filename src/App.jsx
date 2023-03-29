@@ -1,7 +1,7 @@
 import { React } from 'react'
 import { ProductsList } from './components/ProductsList'
 import { Nav } from './components/Nav'
-import { ProductsContextProvider } from './context/Products/ProductsContext'
+import { AppContextProvider } from './context/Products/AppContext'
 import { Categories } from './components/Categories'
 import { Carrousel } from './components/Carousel'
 import { InicioSesion } from './components/Login'
@@ -10,7 +10,7 @@ import Loading from './components/Loading'
 
 export function App () {
   return (
-    <ProductsContextProvider>
+    <AppContextProvider>
       <Loading />
       <Nav />
       <div className='relative'>
@@ -43,6 +43,6 @@ export function App () {
         </h2>
         <ProductsList />
       </div>
-    </ProductsContextProvider>
+    </AppContextProvider>
   )
 }
