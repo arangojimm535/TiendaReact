@@ -1,2 +1,4 @@
-export const GET_PRODUCTS = "GET_PRODUCTS";
-export const GET_ONE_PRODUCT = "GET_ONE_PRODUCT";
+export const SET_PRODUCTS = 'SET_PRODUCTS'
+export const SET_ONE_PRODUCT = 'SET_ONE_PRODUCT'
+export const SET_VIEW_LOGIN = 'SET_VIEW_LOGIN'
+export const CHANGE_VIEW_LOGIN = 'CHANGE_VIEW_LOGIN'
