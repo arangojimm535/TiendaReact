@@ -22,6 +22,6 @@ git commit -m 'deploy'
 
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:arangojimmy535/Tienda.git main:gh-pages
+git push -f git@github.com:arabgojimmy535/TiendaReact.git main:gh-pages
 
 cd -
