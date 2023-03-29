@@ -7,12 +7,7 @@ function ProductCard ({ product }) {
   }
   return (
     <motion.div
-      whileHover={{
-        scale: 1.2,
-        boxShadow:
-          'rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px',
-        transition: { duration: 0.5 }
-      }}
+      whileHover={{ }}
       whileTap={{ scale: 0.9 }}
       className=' rounded-xl bg-slate-50 shadow-2xl min-h-min grid grid-flow-row'
     >
